@@ -1,0 +1,15 @@
+Project Highlights:
+• Automated Infrastructure Deployment: Leveraged Terraform to automate the creation of a VPC, subnets, internet gateway, route tables, and EC2 instances.
+• Dynamic Configuration: Used data sources to fetch the latest Amazon Linux AMI, ensuring the most up-to-date and secure environment.
+• Efficient Resource Management: Applied best practices by splitting Terraform configurations into multiple files for better organization and maintainability.
+• Web Server Setup: Configured an EC2 instance to automatically install and start Apache, displaying a custom message with instance metadata (public IP and region) on the home page.
+
+Technical Details:
+• VPC and Networking: Created a VPC with public and private subnets, associated them with route tables, and set up an internet gateway.
+• Security: Configured security groups to allow HTTP and SSH access, ensuring secure connectivity.
+• Instance Initialization: Used user_data scripts to automate server setup and configuration, showcasing the power of automation in cloud environments.
+Key Takeaways:
+• Mastery of Terraform's capabilities to define and provision infrastructure.
+• Enhanced understanding of AWS services and networking components.
+• Demonstrated ability to implement best practices in IaC for scalable and maintainable infrastructure.
+This project has been a fantastic learning experience, and I look forward to tackling more complex cloud automation challenges in the future.
