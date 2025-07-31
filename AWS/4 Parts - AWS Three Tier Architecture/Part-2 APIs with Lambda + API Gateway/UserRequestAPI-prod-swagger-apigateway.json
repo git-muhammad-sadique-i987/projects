@@ -1,0 +1,57 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2025-07-14T20:13:05Z",
+    "title" : "UserRequestAPI"
+  },
+  "host" : "27v145hdi0.execute-api.us-east-1.amazonaws.com",
+  "basePath" : "/prod",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/" : {
+      "get" : {
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:619071326582:function:RetrieveUserData/invocations",
+          "responses" : {
+            "default" : {
+              "statusCode" : "200"
+            }
+          },
+          "passthroughBehavior" : "when_no_match",
+          "timeoutInMillis" : 29000,
+          "contentHandling" : "CONVERT_TO_TEXT"
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Empty" : {
+      "type" : "object",
+      "title" : "Empty Schema"
+    }
+  },
+  "x-amazon-apigateway-documentation" : {
+    "version" : "1",
+    "createdDate" : "2025-07-14T20:19:33Z",
+    "documentationParts" : [ {
+      "location" : {
+        "type" : "API"
+      },
+      "properties" : {
+        "description" : "The UserRequestAPI manages user data retrieval and manipulation. It supports operations to retrieve user details based on unique identifiers.",
+        "baseURL" : "https://27v145hdi0.execute-api.us-east-1.amazonaws.com/"
+      }
+    } ]
+  }
+}
