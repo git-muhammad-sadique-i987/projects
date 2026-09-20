@@ -1,0 +1,69 @@
+# ---------------------------------------------------------------------------
+# This repository is PUBLIC: github.com/git-muhammad-sadique-i987/projects
+#
+# Policy: nothing client-identifying, credential-bearing or restricted may be
+# committed. Publishable work goes out ANONYMIZED, via the publishing pipeline,
+# not by adding a whole project folder.
+#
+# If you need to publish something currently ignored here, sanitize it first,
+# then add that specific file with: git add -f <path>
+# ---------------------------------------------------------------------------
+
+# --- Credentials and state -------------------------------------------------
+*.env
+.env
+.env.*
+*.key
+*.pem
+*.p7b
+*.pfx
+*.ppk
+id_rsa*
+*.tfstate
+*.tfstate.*
+.terraform/
+api_keys.json
+service-account.json
+credentials.json
+*secret*
+*password*
+keyz.txt
+
+# --- Database dumps and backups --------------------------------------------
+*.sql
+*.sql.gz
+*.dump
+*.bak
+BackupLog.txt
+
+# --- Restricted: live client and organisational data -----------------------
+# Estate database dumps. Move these off the machine entirely.
+2026-08-10_00-19-41/
+
+# Client application trees, real attachments, production config
+Navy Complaint Management Application/
+public_html*.zip
+storage/app/public/complaint-attachments/
+
+# Named client engagement: client name, incident report, pricing, internal briefing
+Eagle Eye - Crypton Project/
+
+# Election security data and military inventory records
+Data Analysis Projects/
+
+# --- Sync and OS scratch ---------------------------------------------------
+.tmp.driveupload/
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# --- Large binaries that do not belong in git ------------------------------
+*.vhd
+*.vhdx
+*.vmdk
+*.iso
+*.qcow2
+
+# Workspace context, local only
+/CLAUDE.md
