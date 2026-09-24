@@ -45,8 +45,10 @@ Navy Complaint Management Application/
 public_html*.zip
 storage/app/public/complaint-attachments/
 
-# Named client engagement: client name, incident report, pricing, internal briefing
+# Named client engagement: client name, incident report, pricing, internal briefing.
+# The correct name is Krypton. The folder on disk is misspelled Crypton, so match both.
 Eagle Eye - Crypton Project/
+Eagle Eye - Krypton Project/
 
 # Election security data and military inventory records
 Data Analysis Projects/
