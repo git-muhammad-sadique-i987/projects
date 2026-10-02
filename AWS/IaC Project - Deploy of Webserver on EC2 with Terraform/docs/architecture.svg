@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 780" width="1400" height="780" role="img" aria-labelledby="t d">
+  <title id="t">What terraform apply builds</title>
+  <desc id="d">In AWS region us-east-1, a VPC with CIDR 10.0.0.0/16 holds a public subnet 10.0.2.0/24 and a second subnet 10.0.1.0/24. An internet gateway attaches to the VPC. One route table sends 0.0.0.0/0 to the internet gateway and is associated with both subnets. An EC2 t2.micro instance running Amazon Linux 2 sits in the public subnet behind a security group that allows HTTP and SSH from anywhere. User data installs Apache and writes a page showing the instance's public IP and region. A visitor reaches the page over HTTP.</desc>
+  <defs>
+    <style>
+      .h { font-family: Montserrat, "Segoe UI", Arial, sans-serif; }
+      .b { font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif; }
+      .m { font-family: "JetBrains Mono", Consolas, monospace; }
+      .ttl { font-size: 38px; font-weight: 700; fill: #ffffff; letter-spacing: -0.4px; }
+      .sub { font-size: 19px; fill: #9fb3c8; }
+      .zone { font-size: 14px; font-weight: 700; fill: #9fb3c8; letter-spacing: 2px; }
+      .lbl { font-size: 17px; font-weight: 600; fill: #ffffff; }
+      .q   { font-size: 15px; fill: #9fb3c8; }
+      .code { font-size: 14px; fill: #dbe6f2; }
+      .sg  { font-size: 14px; font-weight: 600; fill: #f9a318; }
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#027cff"/>
+    </marker>
+    <marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9fb3c8"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="780" fill="#002145"/>
+
+  <!-- title -->
+  <rect x="60" y="48" width="52" height="5" rx="2.5" fill="#f9a318"/>
+  <text x="60" y="104" class="h ttl">What terraform apply builds</text>
+  <text x="60" y="138" class="b sub">A web server on EC2, from nine Terraform files and one user-data script</text>
+
+  <!-- visitor -->
+  <rect x="60" y="356" width="190" height="112" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#9fb3c8" stroke-opacity="0.35"/>
+  <g fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round">
+    <rect x="125" y="374" width="60" height="40" rx="4"/><line x1="125" y1="384" x2="185" y2="384"/>
+    <circle cx="132" cy="379" r="1.4" fill="#ffffff"/><circle cx="138" cy="379" r="1.4" fill="#ffffff"/>
+  </g>
+  <text x="155" y="440" class="h lbl" text-anchor="middle">Visitor</text>
+  <text x="155" y="458" class="b q" text-anchor="middle">web browser</text>
+
+  <!-- AWS region -->
+  <rect x="320" y="178" width="1020" height="560" rx="16" fill="none" stroke="#9fb3c8" stroke-opacity="0.45" stroke-width="1.5" stroke-dasharray="7 7"/>
+  <text x="344" y="208" class="h zone">AWS · US-EAST-1</text>
+
+  <!-- VPC -->
+  <rect x="470" y="232" width="840" height="482" rx="14" fill="#027cff" fill-opacity="0.10" stroke="#027cff" stroke-opacity="0.6" stroke-width="1.5"/>
+  <text x="494" y="262" class="h zone">VPC</text>
+  <text x="540" y="262" class="m code">10.0.0.0/16</text>
+
+  <!-- internet gateway on the VPC edge -->
+  <rect x="428" y="378" width="84" height="68" rx="10" fill="#0b3a75" stroke="#ffffff" stroke-width="1.6"/>
+  <g fill="none" stroke="#ffffff" stroke-width="1.8"><path d="M452 412 h36 M480 404 l8 8 l-8 8 M460 404 l-8 8 l8 8"/></g>
+  <text x="470" y="470" class="h lbl" font-size="15" text-anchor="middle">Internet gateway</text>
+
+  <!-- visitor to IGW -->
+  <line x1="250" y1="412" x2="424" y2="412" stroke="#027cff" stroke-width="3" marker-end="url(#a)"/>
+  <text x="337" y="400" class="b q" text-anchor="middle">HTTP :80</text>
+
+  <!-- route table -->
+  <rect x="540" y="520" width="228" height="104" rx="12" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.25"/>
+  <text x="560" y="552" class="h lbl">Route table</text>
+  <text x="560" y="580" class="m code">0.0.0.0/0 → IGW</text>
+  <text x="560" y="604" class="b q">one table, both subnets</text>
+  <line x1="478" y1="484" x2="560" y2="520" stroke="#9fb3c8" stroke-width="1.6" stroke-dasharray="5 5"/>
+
+  <!-- public subnet -->
+  <rect x="820" y="282" width="460" height="196" rx="12" fill="#027cff" fill-opacity="0.14" stroke="#027cff" stroke-opacity="0.6"/>
+  <text x="842" y="310" class="h zone">PUBLIC SUBNET</text>
+  <text x="1018" y="310" class="m code">10.0.2.0/24</text>
+  <text x="842" y="332" class="b q">public IP on launch</text>
+
+  <!-- security group around the instance -->
+  <rect x="842" y="346" width="416" height="116" rx="10" fill="none" stroke="#f9a318" stroke-width="1.8" stroke-dasharray="6 5"/>
+  <text x="856" y="368" class="b sg">Security group · 80 and 22 open</text>
+  <!-- instance -->
+  <rect x="862" y="380" width="376" height="68" rx="10" fill="#0b3a75" stroke="#ffffff" stroke-width="1.6"/>
+  <g fill="none" stroke="#ffffff" stroke-width="1.6"><rect x="880" y="394" width="32" height="40" rx="3"/><line x1="886" y1="404" x2="906" y2="404"/><line x1="886" y1="414" x2="906" y2="414"/><line x1="886" y1="424" x2="906" y2="424"/></g>
+  <text x="928" y="409" class="h lbl">EC2 web server · t2.micro</text>
+  <text x="928" y="433" class="b q">Amazon Linux 2 · Apache from user data</text>
+
+  <!-- IGW to instance -->
+  <path d="M512 412 H 858" fill="none" stroke="#027cff" stroke-width="3" marker-end="url(#a)"/>
+
+  <!-- second subnet -->
+  <rect x="820" y="512" width="460" height="168" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#9fb3c8" stroke-opacity="0.45"/>
+  <text x="842" y="540" class="h zone">PRIVATE SUBNET</text>
+  <text x="1024" y="540" class="m code">10.0.1.0/24</text>
+  <text x="842" y="568" class="b q">no instances</text>
+  <text x="842" y="592" class="b q">shares the public route table,</text>
+  <text x="842" y="614" class="b q">so it is not isolated yet</text>
+
+  <!-- associations -->
+  <path d="M768 548 C 795 548 795 420 818 420" fill="none" stroke="#9fb3c8" stroke-width="1.6" stroke-dasharray="5 5" marker-end="url(#am)"/>
+  <path d="M768 596 C 795 596 795 600 818 600" fill="none" stroke="#9fb3c8" stroke-width="1.6" stroke-dasharray="5 5" marker-end="url(#am)"/>
+
+  <!-- Terraform notes -->
+  <g>
+    <text x="60" y="560" class="h zone">ALSO IN THE CODE</text>
+    <text x="60" y="592" class="m code">data.aws_ami</text><text x="190" y="592" class="b q">newest Amazon Linux 2</text>
+    <text x="60" y="620" class="m code">user_data</text><text x="190" y="620" class="b q">setup.sh</text>
+    <text x="60" y="648" class="m code">output</text><text x="190" y="648" class="b q">the public IP</text>
+    <text x="60" y="676" class="m code">provider</text><text x="190" y="676" class="b q">aws 5.81.0, pinned</text>
+  </g>
+</svg>

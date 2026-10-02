@@ -69,3 +69,6 @@ desktop.ini
 
 # Workspace context, local only
 /CLAUDE.md
+
+# Visual Studio workspace cache
+.vs/
