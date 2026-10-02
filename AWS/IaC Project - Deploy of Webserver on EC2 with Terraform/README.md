@@ -5,7 +5,8 @@ networking, a security group and an EC2 instance that installs Apache on first b
 page reporting its own public IP and region. One `terraform destroy` removes all of it.
 
 Built in January 2025 as hands-on infrastructure-as-code practice by
-[Muhammad Sadique](https://www.linkedin.com/in/muhammad-sadique-i987/), Lead Infrastructure Engineer.
+[Muhammad Sadique](https://www.linkedin.com/in/muhammad-sadique-i987/), Lead Infrastructure Engineer,
+and deployed to my own AWS account, where it built the intended infrastructure.
 More write-ups live on the [project wiki](https://github.com/git-muhammad-sadique-i987/projects/wiki/Welcome-to-My-GitHub-Wiki).
 
 ![What terraform apply builds: a VPC with a public subnet holding an EC2 web server behind a security group, an internet gateway, a shared route table and a second subnet](docs/architecture.png)
