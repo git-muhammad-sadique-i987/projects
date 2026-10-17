@@ -1,0 +1,42 @@
+{
+  "skill_name": "pakistani-urdu",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I run a small car workshop in Rawalpindi. Put this safety notice into Urdu for my mechanics and print it big: 'Always disconnect the battery before welding. Never weld near the fuel tank. Wear gloves and eye protection. Report any fuel leak to the supervisor immediately.'",
+      "expected_output": "Short spoken-register Pakistani workshop Urdu (e.g. بیٹری کا تار اتاریں، ٹینکی، دستانے، عینک), reasons folded in with ورنہ/کیونکہ, no Sanskritised words, no word-by-word calques, no English sentence skeleton.",
+      "files": [],
+      "assertions": [
+        "urdu_lint.py reports no 'indian' or 'calque' findings on the Urdu",
+        "Uses ٹینکی (or پیٹرول کی ٹینکی) rather than ٹینک for the fuel tank",
+        "No passive 'جانا چاہیے' constructions",
+        "Instructions use imperative/light-verb forms (کریں، لیں، دیں) rather than repeated 'آپ کو ... چاہیے'"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Make me a 30 second Urdu voice-over (mp3) for a reel about my bike shop in Lahore: we fit Classic-style seats, chrome mirrors and new brake shoes on CD70 and CG125, prices start from 2500 rupees.",
+      "expected_output": "A speech text with numbers as words in Pakistani style (سی ڈی سیونٹی، سی جی ون ٹو فائیو، پچیس سو روپے), loanwords passed through the lexicon (کْلاسک), synthesized with ur-PK voice at +0% rate, plus a listening-check note or sheet for unverified words.",
+      "files": [],
+      "assertions": [
+        "Speech text contains no digits",
+        "CG125 is rendered as سی جی ون ٹو فائیو, not ون ٹوئنٹی فائیو",
+        "Classic is spoken via the lexicon spelling کْلاسک",
+        "An ur-PK voice is used (not ur-IN)",
+        "The reply tells the user Claude could not listen and offers a listening check"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "my cousin in karachi says this whatsapp msg sounds like an indian wrote it lol can u fix: 'नमस्ते bhaiya, aapki bike ka kaam ek dum bindaas ho gaya, kripya kal 5 baje aake le jaiye, dhanyavaad'",
+      "expected_output": "Roman Urdu in Pakistani style: greeting السلام علیکم/AoA, بھائی (bhaiya is fine in Karachi but the rest is Indian), no bindaas/kripya/dhanyavaad, 'motorcycle ka kaam ho gaya', 'kal 5 baje aa kar le jayen', 'shukriya'. Short, WhatsApp-sized, with a one-line note on what made it sound Indian.",
+      "files": [],
+      "assertions": [
+        "No 'kripya', 'dhanyavaad', 'bindaas' or 'namaste' in the rewrite",
+        "Uses a Pakistani greeting and 'shukriya'",
+        "Stays in Roman Urdu (does not switch to Urdu script) because the user wrote Roman Urdu",
+        "Explains briefly which words made it sound Indian"
+      ]
+    }
+  ]
+}

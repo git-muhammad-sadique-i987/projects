@@ -1,0 +1,32 @@
+# display<TAB>speech<TAB>evidence
+# Applied by urdu_tts.py to the speech text only (never to display text). Longest match wins,
+# whole words only. Timings are from probe_pronunciation.py with ur-PK-AsadNeural / ur-PK-UzmaNeural,
+# carrier "یہ {} ہے۔": "jazm" = spelling with sukun on the first letter, "forced" = control with
+# the extra vowel written in. Shorter than plain with jazm, and longer with forced, means the plain
+# spelling was getting an inserted vowel.
+#
+# Loanwords that start with two consonants: put jazm on the first letter.
+کلاسک	کْلاسک	jazm -63/-50 ms, forced +63/+63; listener heard "calassic" from plain
+فریم	فْریم	jazm -100/-87 ms, forced +88/+50
+پلیٹ	پْلیٹ	jazm -63/-50 ms, forced +50/+50
+بریکر	بْریکر	jazm -38/-26 ms, forced +87/+87
+سوئنگ	swing	Latin -62/-37 ms; jazm+kasra spelling was worse (+138 ms)
+سوئچ	switch	Latin -76/-63 ms; jazm +37/+87 and pesh +37/+112 were worse (sw- clusters: use Latin)
+#
+# Tested and fine as plain (no entry needed): بریک (jazm -13), بریکٹ (jazm -13), کلیمپ (jazm +37),
+# کریک (jazm -26/0). Their forced-vowel controls were +74 to +124 ms, so plain has no extra vowel.
+#
+# Ambiguous native words: add the vowel marks that pick the right reading.
+کس دیں	کَس دیں	"tighten": plain timed like کِس ("kis", +37) not کَس (+124), carrier "اب بولٹ {} کریں"
+کسے ہوئے	کَسے ہوئے	same verb
+کسا ہوا	کَسا ہوا	same verb
+کٹر	کَٹَر	"cutter": plain timed like کَٹّر ("kattar", fanatic); کَٹَر +38
+سوا	سَوا	"1¼": inconclusive by timing (plain 938, sawa 1025, siwa 975 ms); marks are the correct reading; listener check
+پتی	پَتّی	"metal strip": inconclusive by timing; marks are the correct reading
+گدی	گَدّی	"seat": inconclusive; prefer سیٹ in speech
+#
+# Names and numbers said the Pakistani way.
+سی جی 125	سی جی ون ٹو فائیو	Pakistanis say one-two-five for the CG125, not one-twenty-five
+سی جی125	سی جی ون ٹو فائیو	same
+CG125	سی جی ون ٹو فائیو	same
+کلاسک 350	کْلاسک تھری ففٹی	combines the کلاسک fix
