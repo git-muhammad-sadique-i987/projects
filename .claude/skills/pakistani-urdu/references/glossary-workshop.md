@@ -9,7 +9,7 @@ matters.
 
 | English | Write | Notes |
 |---|---|---|
-| mechanic (addressing him) | استاد جی | respectful default; also مستری |
+| mechanic | مکینک، مستری | customers call a mechanic استاد جی face to face, but don't use it to address the audience of a guide or video unless asked |
 | apprentice | چھوٹا | as in "چھوٹے کو کہہ دیں" |
 | lathe operator / machinist | خرادیہ | his shop: خراد |
 | welder | ویلڈنگ والا | |

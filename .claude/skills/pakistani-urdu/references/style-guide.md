@@ -15,7 +15,7 @@ Contents
 
 | Audience | Sounds right | Sounds wrong |
 |---|---|---|
-| Mechanic, driver, shopkeeper | Short spoken sentences, trade words in English as they say them (بریک، کلچ، سیٹنگ), "استاد جی", inches | Formal Persian words (بخارات، ہرگز بھی), textbook passives, mm everywhere |
+| Mechanic, driver, shopkeeper | Short spoken sentences, trade words in English as they say them (بریک، کلچ، سیٹنگ), inches | Formal Persian words (بخارات، ہرگز بھی), textbook passives, mm everywhere |
 | Family, friends | Warm, simple, "آپ" or "تم" as the relationship demands, everyday words | Office Urdu, English headings |
 | Office, clients | Polite, complete sentences, English business terms Pakistanis use (میٹنگ، رپورٹ، ڈیڈ لائن) | Slang, or heavy Arabic/Persian |
 | Public notice, official | Formal Urdu, Perso-Arabic vocabulary (اطلاع، ہدایت، بذریعہ) | Chatty tone |
@@ -37,7 +37,7 @@ their own slang. Any of the left-hand column makes Urdu sound Indian to a Pakist
 | دھنیواد | شکریہ، بہت شکریہ |
 | آپ کا سواگت ہے | خوش آمدید |
 | کرپیا | مہربانی کر کے، براہ مہربانی |
-| بھیا outside Karachi (normal in Karachi Urdu, reads as Indian elsewhere) | بھائی، بھائی جان، استاد جی |
+| بھیا outside Karachi (normal in Karachi Urdu, reads as Indian elsewhere) | بھائی (and only when the person wants direct address at all) |
 | (no closing) | اللہ حافظ، خدا حافظ |
 
 ### Sanskritised words
@@ -130,10 +130,12 @@ From a motorcycle workshop guide that a native reader rejected as "Google transl
 | دھات سے دھات لگنے پر وائبریشن سے ٹینک میں دراڑ آ جاتی ہے۔ | لوہا لوہے سے لگا تو جھٹکوں سے ٹینکی کریک ہو جائے گی۔ |
 | بائیک سینٹر اسٹینڈ پر کھڑی کریں۔ | موٹر سائیکل ڈبل اسٹینڈ پر کھڑی کریں۔ |
 | ہونڈا سی جی ون ٹوئنٹی فائیو | ہونڈا سی جی ون ٹو فائیو |
-| یہ مکینک کے لیے ورکشاپ گائیڈ ہے۔ | السلام علیکم استاد جی۔ اس ویڈیو میں دیکھیں گے کہ... |
+| یہ مکینک کے لیے ورکشاپ گائیڈ ہے۔ | السلام علیکم۔ اس ویڈیو میں دیکھیں گے کہ... |
+| السلام علیکم استاد جی۔ (first rewrite) | السلام علیکم۔ (the reviewer asked to drop استاد جی entirely) |
 
 What changed, in general terms: meaning first, then the words the listener uses; reasons
-folded in with ورنہ; Pakistani trade words; a greeting; no English sentence skeleton.
+folded in with ورنہ; Pakistani trade words; a plain greeting with no honorific; no English
+sentence skeleton.
 
 ## 5. Numbers, units and names
 

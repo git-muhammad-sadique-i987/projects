@@ -49,6 +49,7 @@ PATTERNS = [
     ("word", wb("تھروٹل"), "throttle is ریس in workshop Urdu"),
     ("word", wb("چیسس"), "usually written and said چیسز"),
     ("word", wb("اسٹاک"), "'stock' parts: کمپنی والا / اوریجنل / وہی رہے گا"),
+    ("word", wb("استاد جی|بھائی جان"), "honorific address to the audience; drop it unless the person asked for it"),
     ("calque", r"(?:جانے|جانا|جانی) (?:چاہئیں|چاہیے|چاہییں|چاہیئے)", "English-style passive; say it actively (e.g. صاف نظر آنے چاہئیں)"),
     ("calque", r"(?:کیا|کیے|کی) جائے(?:ں)?(?![\w])", "passive instruction; prefer کریں / کرنا ہے"),
     ("calque", r"قدم\s*[0-9۰-۹]|پہلا قدم|دوسرا قدم|تیسرا قدم", "heading copied from 'Step N'; say پہلا کام / دوسرا کام"),

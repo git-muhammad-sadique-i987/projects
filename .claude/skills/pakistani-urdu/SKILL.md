@@ -51,8 +51,10 @@ knowledgeable Pakistani. This is transcreation, not translation. In practice:
   matters. Model names follow Pakistani habit: "سی جی ون ٹو فائیو", "ہنڈا سیونٹی".
 - **Headings are things people say:** "پہلا کام: سیٹ", "یہ کام نہیں کرنے",
   "موٹر سائیکل واپس کرنے سے پہلے". Not "قدم 1" or "اہم نکات".
-- **Open and close like a Pakistani would** when the format allows: "السلام علیکم استاد جی",
-  "شکریہ، اللہ حافظ".
+- **Greet plainly; don't put on a persona.** "السلام علیکم" to open and "شکریہ، اللہ حافظ" to
+  close suit videos and messages. Do not address the audience with an honorific such as
+  استاد جی or بھائی جان unless the person asks for it: it reads as put-on familiarity (a native
+  reviewer rejected it), and the real audience may not be who you pictured.
 
 `references/style-guide.md` has the full list of Pakistani-vs-Indian markers, calque
 patterns with fixes, and before/after examples. Read it the first time you use this skill
@@ -136,6 +138,26 @@ deliver Urdu audio, also deliver a short listening sheet for the words you could
 (the probe script writes one: each variant announced by number), and ask the person to say
 which number sounds right. Say plainly that you could not listen yourself. Their answer goes
 into the lexicon, so the next run is right.
+
+### 8. Ask for a native recording when the voice still sounds off
+
+If the person says the pronunciation or accent is still not right, the most useful next step
+is a recording of a native speaker reading the same script. Give them a recording script
+(large Urdu text, one block per scene or paragraph, numbers already written as words) and a
+short brief: one voice note per block in order, normal pace, quiet room, don't read the
+headings, and say a word their own way if it feels wrong (and mention the change). Offer two
+sizes: a short calibration set (the blocks with the most loanwords, numbers and fractions)
+and the full script.
+
+Be clear about what you can do with it, because you still cannot listen:
+- Full script: use their voice as the Urdu soundtrack. A real Pakistani voice beats any
+  tuning of a synthetic one.
+- Short set: measure their pace and pauses and match the synthetic voice to them, and align
+  their recording with the synthetic one word by word to find words the voice says
+  differently, then probe and fix those spellings.
+- You cannot clone their voice or change the synthetic voice's accent.
+
+`references/tts-pronunciation.md` (section 7) has the details.
 
 ## Files
 

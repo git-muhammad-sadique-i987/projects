@@ -7,6 +7,7 @@ Contents
 4. Probing a word (method)
 5. Results so far
 6. What timing cannot tell you
+7. Using a native speaker's recording
 
 ## 1. Why the voice gets Urdu wrong
 
@@ -112,3 +113,36 @@ whether the overall voice sounds like it is from Lahore or from somewhere else. 
 listen. So every delivery of Urdu audio comes with a short listening sheet and a plain
 request: "I couldn't listen to this myself; which number sounds right?" Record the answer in
 the lexicon's evidence column (e.g. "listener chose 2, 2026-10").
+
+## 7. Using a native speaker's recording
+
+When listening sheets are not enough ("the pronunciation still needs improvement"), ask for a
+recording of a native speaker reading the script.
+
+**What to send them:** a recording script with one block per scene or paragraph, large
+Nastaliq text, the numbers already written as words (exactly the speech text minus vowel
+marks), and the brief: one WhatsApp voice note per block in order, normal conversational
+pace, quiet room, phone about a hand-span away, don't read headings or numbers of blocks, say
+words their own way if the script feels wrong and tell you what they changed. Mark a short
+calibration set (two or three blocks dense in loanwords, fractions and model names) for
+people who don't want to record everything.
+
+**What the recording gives you:**
+1. *The soundtrack itself.* With the full script, use their voice as the Urdu track. Trim
+   leading and trailing silence per block, normalise loudness (ffmpeg `loudnorm`), and time
+   each slide to its block. This is the best result by far.
+2. *Pace and pauses.* Their words per second and the length of their pauses at "،" and "۔"
+   tell you how to set the voice's rate and where to insert silences. Edge voices take no
+   pause tags, so synthesize sentence by sentence and join with silences of the measured
+   length.
+3. *Words the voice says differently.* Align their block with the synthetic voice's reading
+   of the same text (MFCC features plus dynamic time warping, e.g. with `librosa`), map the
+   voice's word timings onto their audio, and compare each word's duration after correcting
+   for overall pace. Words whose length differs a lot are where the voice adds or drops a
+   syllable or stresses differently. Probe those spellings (section 4) and update the lexicon.
+4. *Voice choice.* Their pitch range is a fair hint at which of the two Pakistani voices to
+   prefer, but let them decide by ear.
+
+**What it cannot do:** you cannot clone their voice or change the synthetic voice's accent
+with the tools here, and you still cannot judge vowel quality. Say so when you ask for the
+recording, so the person knows what they will get.
